@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="common.css">
+  <style>
+    body { width: 380px; padding: 14px; }
+    header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    h1 { font-size: 16px; margin: 0; }
+    .bar { display: flex; gap: 8px; margin-bottom: 10px; }
+    .bar select { flex: 1; }
+    #items { display: flex; flex-direction: column; gap: 8px; max-height: 340px; overflow-y: auto; }
+    .item { padding: 9px 11px; }
+    .item .date { font-size: 12px; color: var(--muted); }
+    footer { margin-top: 12px; }
+    footer .btn { width: 100%; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Reel Stash</h1>
+    <span id="count" class="muted"></span>
+  </header>
+  <div class="bar">
+    <select id="collection" class="field" aria-label="Collection"></select>
+    <button id="saveTab" class="btn primary" hidden>Save this reel</button>
+  </div>
+  <div id="items"></div>
+  <footer><button id="open" class="btn">Open full page</button></footer>
+  <script src="shared.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
